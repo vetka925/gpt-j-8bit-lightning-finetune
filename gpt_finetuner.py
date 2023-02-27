@@ -51,13 +51,13 @@ class GPTJ8bitFineTuner(pl.LightningModule):
         
         
         logits = out.logits[loss_mask.roll(shifts=-1, dims=2)]
-        labels = input_ids[loss_mask]
-        loss = cross_entropy(logits, labels)
+        completion_tok_ids = input_ids[loss_mask]
+        loss = cross_entropy(logits, completion_tok_ids)
         preds = None
         if self.config.classification:
             preds = torch.argmax(logits, dim=1)
         
-        return loss, preds, labels
+        return loss, preds, completion_tok_ids
 
 
     def training_step(self, batch, batch_idx):

@@ -9,7 +9,7 @@ The purpose of this repo to make little research of GPT like models and approach
 1. At least 11 GB of VRAM
 2. Linux (required for bitsandbytes package)
 
-This code was tested on WSL Ubuntu 22.04, Geforce GTX 1080 TI, Cuda toolkit 1.7
+This code was tested on WSL Ubuntu 22.04, Geforce GTX 1080 TI, Cuda toolkit 11.7
 
 ## Usage
 
@@ -35,7 +35,8 @@ Or you can run [this Kaggle notebook](https://www.kaggle.com/code/vetka925/gpt-j
 ## Description
 
 Finetuning and approach comparison: [finetune.ipynb](https://github.com/vetka925/gpt-j-8bit-lightning-finetune/blob/master/finetune.ipynb)  
-Finetuning OpenAI model: [compare_openai.ipynb](https://github.com/vetka925/gpt-j-8bit-lightning-finetune/blob/master/compare_openai.ipynb)  
+Finetuning OpenAI model: [compare_openai.ipynb](https://github.com/vetka925/gpt-j-8bit-lightning-finetune/blob/master/compare_openai.ipynb) 
+Fewshot example: [fewshot.ipynb](https://github.com/vetka925/gpt-j-8bit-lightning-finetune/blob/master/fewshot.ipynb)
   
 Test task is Hate Speech and Offensive Language Detection.  
 Data: 1000 train and 200 validation samples with balanced classes from [Hate Speech and Offensive Language Dataset](https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-dataset)
