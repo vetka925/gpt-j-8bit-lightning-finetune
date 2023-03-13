@@ -56,7 +56,7 @@ This repo leverage 3 approaches to Finetune GPT-J-8bit.
 Also Few Shot approach was validated too.  
   
 **Why do we need Low ranked adapters?**  
-[GPT-j-8bit](https://huggingface.co/hivemind/gpt-j-6B-8bit) In GPT-J-8bit, the parameters are quantized. Training quantized integer parameters with conventional algorithms is not a reasonable approach if only because the range of cross-entropy loss values lies in [0, 1]. But even quantization does not free us from training a huge number of parameters and the costs of calculations. It is possible to train only low-dimenisonal adapters. Low ranked adapters (LoRA) described in this [paper](https://arxiv.org/abs/2106.09685)  
+ In [GPT-j-8bit](https://huggingface.co/hivemind/gpt-j-6B-8bit), the parameters are quantized. Training quantized integer parameters with conventional algorithms is not a reasonable approach if only because the range of cross-entropy loss values lies in [0, 1]. But even quantization does not free us from training a huge number of parameters and the costs of calculations. It is possible to train only low-dimenisonal adapters. Low ranked adapters (LoRA) described in this [paper](https://arxiv.org/abs/2106.09685)  
 
 **How dataset was prepared?**  
 The way that you pass the data to the model is significant. Instruction based and raw text prompts were used.  
